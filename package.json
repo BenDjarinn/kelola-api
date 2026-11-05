@@ -20,6 +20,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "db:seed": "tsx src/db/seed.ts",
+    "db:backfill-members": "tsx src/db/backfill-workspace-members.ts",
     "db:migrate:prod": "node dist/db/migrate.js"
   },
   "keywords": [],
