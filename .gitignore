@@ -29,3 +29,10 @@ Thumbs.db
 # Drizzle
 drizzle/meta/_journal.json.bak
 .neon
+
+#claide
+.claude/*
+
+#.json
+.mcp.json
+skills-lock.json
