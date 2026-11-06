@@ -281,18 +281,6 @@ For the frontend, set `CORS_ORIGIN` to its deployed origin — exactly, with no 
 
 ---
 
-## Known Gaps
-
-An honest list of what is not done:
-
-- **No ESLint or Prettier.** `package.json` declares `lint` and `format` scripts, but neither tool is installed and there is no config file, so both fail. Type safety is covered by `npm run typecheck`.
-- **No workspace or channel CRUD.** Workspaces, channels and projects are created by `db:seed`, which is why `DEFAULT_WORKSPACE_SLUG` exists. Self-serve workspace creation and invitations are the next thing to build.
-- **Notes are last-write-wins.** Two people editing the same note overwrite each other. Real concurrent editing needs a CRDT and was deliberately out of scope.
-- **AI history is shared per project, not per user.** It is filtered by `project_id` only, so every workspace member sees every AI conversation in that project.
-- **Malformed JSON answers 500, not 400.** `express.json()` throws a `SyntaxError` that the error handler treats like any other failure.
-
----
-
 ## License
 
 MIT
