@@ -28,7 +28,12 @@ Thumbs.db
 
 # Drizzle
 drizzle/meta/_journal.json.bak
+
+# Neon CLI local state. `.neon` is this machine's project/org context, and neon.ts is
+# generated scaffolding that nothing in src/ imports — the branch policy in it only
+# affects `neon checkout` on a developer's own machine, never the deployed API.
 .neon
+neon.ts
 
 #claide
 .claude/*
